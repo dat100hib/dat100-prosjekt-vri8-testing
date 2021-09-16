@@ -4,6 +4,8 @@ Vri åtter er et kortspill som de fleste kjenner og det spilles med en vanlig ko
 
 I vår versjon av spillet deltar det nøyaktig to spillere som vi kaller Nord og Syd. Navnet kommer fra hvordan de plasseres i det grafiske grensesnittet som er vist på figuren nedenfor.  
 
+![](assets/markdown-img-paste-20210916151224467.png)
+
 **TODO**: fiks figuren
 
 En av spillerne er giver. Denne spilleren stokker kortene og deler et kort til motstanderen, så et kort til seg selv. Slik holder han/hun på til hver spiller har fått 7 kort. I applikasjonen vil det bli delt ut automatisk når man starter et nytt spill. Deretter snus øverste kortet og legges med billedsiden opp. Dette blir starten på bunken som spillerne senere spiller sine kort til (vi kaller denne bunken for til-bunken). Resten av kortene legges med billedsiden ned og blir bunken som man trekker fra (vi kaller denne bunken for fra-bunken). Kortene som en spiller har kalles en hand.
