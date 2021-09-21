@@ -1,4 +1,4 @@
-package no.hib.dat100.prosjekt.modell.tester;
+package no.hvl.dat100.prosjekt.modell.tester;
 
 import org.junit.Test;
 import org.junit.rules.TestRule;

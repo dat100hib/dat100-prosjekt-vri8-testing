@@ -1,4 +1,4 @@
-package no.hib.dat100.prosjekt.modell.tester;
+package no.hvl.dat100.prosjekt.modell.tester;
 
 import static org.junit.Assert.assertEquals;
 

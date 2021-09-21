@@ -1,4 +1,4 @@
-package no.hib.dat100.prosjekt.kontroll.tester;
+package no.hvl.dat100.prosjekt.kontroll.tester;
 
 import static org.junit.Assert.*;
 

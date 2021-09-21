@@ -1,4 +1,4 @@
-package no.hib.dat100.prosjekt.modell.tester;
+package no.hvl.dat100.prosjekt.modell.tester;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -15,7 +15,7 @@ import org.junit.rules.Timeout;
 import no.hib.dat100.prosjekt.modell.Kort;
 import no.hib.dat100.prosjekt.modell.Kortfarge;
 
-public class TestSamling {
+public class TestKortSamling {
 
 	@Rule
 	public TestRule globalTimeout = Timeout.seconds(30); 
