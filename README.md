@@ -35,7 +35,7 @@ Det er viktig at der er en logisk flytt gjennom presentasjonen så den er enkel 
 
 ## Vri-åtte og formål
 
-Start med å lese om vriåtte spillet og overordnet formål med programmeringsoppgavene her:
+Start med å lese om vri-åtte spillet og overordnet formål med programmeringsoppgavene her:
 
 https://github.com/dat100hib/dat100-prosjekt-testing-2021/blob/master/docs/introduksjon.md
 
