@@ -4,13 +4,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import no.hib.dat100.prosjekt.kontroll.Handling;
-import no.hib.dat100.prosjekt.kontroll.HandlingsType;
-import no.hib.dat100.prosjekt.kontroll.FirstFitSpiller;
-import no.hib.dat100.prosjekt.kontroll.Spiller;
-import no.hib.dat100.prosjekt.kontroll.Spillere;
-import no.hib.dat100.prosjekt.modell.Kort;
-import no.hib.dat100.prosjekt.modell.Kortfarge;
+import no.hvl.dat100.prosjekt.kontroll.FirstFitSpiller;
+import no.hvl.dat100.prosjekt.kontroll.Handling;
+import no.hvl.dat100.prosjekt.kontroll.HandlingsType;
+import no.hvl.dat100.prosjekt.kontroll.Spiller;
+import no.hvl.dat100.prosjekt.kontroll.Spillere;
+import no.hvl.dat100.prosjekt.modell.Kort;
+import no.hvl.dat100.prosjekt.modell.Kortfarge;
 
 public class TestFirstFitSpiller {
 

@@ -4,13 +4,13 @@ import org.junit.Test;
 import org.junit.rules.TestRule;
 import org.junit.rules.Timeout;
 
+import no.hvl.dat100.prosjekt.modell.Bunke;
+import no.hvl.dat100.prosjekt.modell.Kort;
+import no.hvl.dat100.prosjekt.modell.Kortfarge;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Rule;
-
-import no.hib.dat100.prosjekt.modell.Bunke;
-import no.hib.dat100.prosjekt.modell.Kort;
-import no.hib.dat100.prosjekt.modell.Kortfarge;
 
 public class TestBunke {
 

@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import no.hib.dat100.prosjekt.modell.Hand;
-import no.hib.dat100.prosjekt.modell.Kort;
-import no.hib.dat100.prosjekt.modell.Kortfarge;
+import no.hvl.dat100.prosjekt.modell.Hand;
+import no.hvl.dat100.prosjekt.modell.Kort;
+import no.hvl.dat100.prosjekt.modell.Kortfarge;
 
 public class TestHand {
 

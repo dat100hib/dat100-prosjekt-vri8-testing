@@ -5,14 +5,14 @@ import static org.junit.Assert.assertFalse;
 
 import org.junit.Test;
 
-import no.hib.dat100.prosjekt.kontroll.ISpiller;
-import no.hib.dat100.prosjekt.kontroll.Regler;
-import no.hib.dat100.prosjekt.kontroll.Spill;
-import no.hib.dat100.prosjekt.kontroll.Spillere;
-import no.hib.dat100.prosjekt.modell.Bunke;
-import no.hib.dat100.prosjekt.modell.Kort;
-import no.hib.dat100.prosjekt.modell.KortSamling;
-import no.hib.dat100.prosjekt.modell.Kortfarge;
+import no.hvl.dat100.prosjekt.kontroll.ISpiller;
+import no.hvl.dat100.prosjekt.kontroll.Regler;
+import no.hvl.dat100.prosjekt.kontroll.Spill;
+import no.hvl.dat100.prosjekt.kontroll.Spillere;
+import no.hvl.dat100.prosjekt.modell.Bunke;
+import no.hvl.dat100.prosjekt.modell.Kort;
+import no.hvl.dat100.prosjekt.modell.KortSamling;
+import no.hvl.dat100.prosjekt.modell.Kortfarge;
 
 public class TestSpill {
 

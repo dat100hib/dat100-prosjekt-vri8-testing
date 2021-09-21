@@ -1,6 +1,6 @@
 package no.hvl.dat100.prosjekt.modell.tester;
 
-import no.hib.dat100.prosjekt.modell.KortSamling;
+import no.hvl.dat100.prosjekt.modell.KortSamling;
 
 public class TKortSamling extends KortSamling {
 

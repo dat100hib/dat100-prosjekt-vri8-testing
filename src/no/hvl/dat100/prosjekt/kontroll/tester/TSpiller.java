@@ -1,9 +1,9 @@
 package no.hvl.dat100.prosjekt.kontroll.tester;
 
-import no.hib.dat100.prosjekt.kontroll.Handling;
-import no.hib.dat100.prosjekt.kontroll.HandlingsType;
-import no.hib.dat100.prosjekt.kontroll.Spiller;
-import no.hib.dat100.prosjekt.modell.Kort;
+import no.hvl.dat100.prosjekt.kontroll.Handling;
+import no.hvl.dat100.prosjekt.kontroll.HandlingsType;
+import no.hvl.dat100.prosjekt.kontroll.Spiller;
+import no.hvl.dat100.prosjekt.modell.Kort;
 
 public class TSpiller extends Spiller {
 
