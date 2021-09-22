@@ -1,4 +1,4 @@
-## Oppgave 1: Ferdiggjøre implementasjon av KortSamling, Hand og Bunke
+## Oppgave 1: Implementasjon av KortSamling, Hand og Bunke
 
 Den første oppgaven er å ferdiggjøre implementasjon av klassen `KortSamling` i `modell`-pakken `no.hvl.dat100.prosjekt.modell` samt noen hjelpemetoder i `KortUtils`klassen.
 
