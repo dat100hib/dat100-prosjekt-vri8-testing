@@ -2,19 +2,25 @@
 
 Andre oppgaven er å implementere metodene i klassen `Spiller` og `Spill` i kontroll-delen av applikasjonen som finnes pakken `no.hvl.dat100.prosjekt.kontroll`.
 
-### Oppgave 2.1
+For å representere identiteten på spillere finnes oppramsklassen `Spillere.java`.
 
-Start med metodene i klassen `Spiller` som skal brukes til å representere en spiller i spillet, herunder de kort som en spiller har på hånden og hvor mange ganger spilleren har trukket fra bunken. Interfacet (kontakten) `ISpiller` beskriver de mulige operasjoner på en `Spiller`.
+### Oppgave 2.1 - Spiller klassen
 
-** TODO: forklare eller fjerne bruken av interfaces**
+Start med metodene i klassen `Spiller` som skal brukes til å representere en spiller i spillet, herunder de kort som en spiller har på hånden og hvor mange ganger spilleren har trukket fra bunken.
+
+Hva de ulike metodene skal gjøre er beskrevet i Java Doc for klassen `Spiller.java`
+
+Interfacet (kontakten) `ISpiller.java` beskriver de mulige operasjoner på en `Spiller`. Vi har ennå ikke hatt om interfaces i faget, men interfaces kan brukes til å spesifisere hvilke metoder som skal finnes i en klasse.
 
 Test implementasjonen ved bruk av enhets-testene for klassen som finnes i test-klassen `TestSpiller` i pakken `no.hvl.dat100.prosjekt.kontroll.tester`.
 
-### Oppgave 2.2
+### Oppgave 2.2 - Spill-klassen
 
 Neste steg er å implementere klassen `Spill` som inneholder metoder for de handlinger som kan skje i selve spillet, de to spillere (nord og syd), samt til-bunken og fra-bunken. Der finnes allerede implementasjon av Java-klasser (`Handling.java` og `HandlingsType.java`) for å representere handlinger (*trekk*, *forbi*, *leggned*) samt en Java-klasse (`Regler.java`) som implementerer de grunnleggende regler i spillet. Videre finnes en klasse `Tur.java` som brukes til å holde rede på hvem sin tur det er i spillet.
 
 Test implementasjonen av `Spill`-klassen ved å bruke enhets-testene for Spill klassen som finnes i test-klassen `TestSpill.java` i pakken `no.hvl.dat100.prosjekt.kontroll.tester`.
+
+### Oppgave 2.3 - Brukergrensesnitt
 
 Hvis implementasjonen av *Spiller* og *Spill* er gjort korrekt, skal det nå være mulig å bruke det grafiske brukergrensesnitt som spiller *Syd* og spille mot spiller Nord (som implementerer en automatisk spiller).
 
