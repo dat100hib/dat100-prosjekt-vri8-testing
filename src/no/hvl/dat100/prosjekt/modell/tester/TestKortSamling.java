@@ -121,68 +121,7 @@ public class TestKortSamling {
 		assertFalse(samling.har(kort3));
 		assertTrue(samling.erTom());
 	}
-
-	@Test
-	public void Teststokk() {
-
-		KortSamling samling = new KortSamling();
-		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
-
-		samling.leggTil(kort1);
-		samling.leggTil(kort2);
-		samling.leggTil(kort3);
-
-		assertEquals(3, samling.getAntalKort());
-		assertTrue(samling.har(kort1));
-		assertTrue(samling.har(kort2));
-		assertTrue(samling.har(kort3));
-		assertFalse(samling.har(null));
-	}
-
-	@Test
-	public void TesttoArrayList() {
-
-		KortSamling samling = new KortSamling();
-		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
-
-		samling.leggTil(kort1);
-		samling.leggTil(kort2);
-		samling.leggTil(kort3);
-
-		ArrayList<Kort> kortarray = samling.toArrayList();
-
-		assertEquals(3, kortarray.size());
-		assertEquals(kort1, kortarray.get(0));
-		assertEquals(kort2, kortarray.get(1));
-		assertEquals(kort3, kortarray.get(2));
-
-	}
 	
-	@Test(timeout = 10000)
-	public void testleggTilSorter() {
-		
-		KortSamling hand = new KortSamling();
-		
-		Kort kort1 = new Kort(Kortfarge.Hjerter,1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter,2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter,3);
-		
-		hand.leggTilSorter(kort1);
-		hand.leggTilSorter(kort3);
-		hand.leggTilSorter(kort2);
-		
-		ArrayList<Kort> kortliste = hand.toArrayList();
-		
-		assertEquals(kort1, kortliste.get(0));
-		assertEquals(kort2, kortliste.get(1));
-		assertEquals(kort3, kortliste.get(2));
-		
-	}
-
 	@Test
 	public void Testtrekk() {
 		KortSamling bunke = new KortSamling();
