@@ -9,9 +9,8 @@ import no.hvl.dat100.prosjekt.kontroll.ISpiller;
 import no.hvl.dat100.prosjekt.kontroll.Regler;
 import no.hvl.dat100.prosjekt.kontroll.Spill;
 import no.hvl.dat100.prosjekt.kontroll.Spillere;
-import no.hvl.dat100.prosjekt.modell.Bunke;
-import no.hvl.dat100.prosjekt.modell.Kort;
 import no.hvl.dat100.prosjekt.modell.KortSamling;
+import no.hvl.dat100.prosjekt.modell.Kort;
 import no.hvl.dat100.prosjekt.modell.Kortfarge;
 
 public class TestSpill {
@@ -25,8 +24,8 @@ public class TestSpill {
 		ISpiller syd = spill.getSyd();
 		ISpiller nord = spill.getNord();
 
-		Bunke bunkeTil = spill.getBunkeTil();
-		Bunke bunkeFra = spill.getBunkeFra();
+		KortSamling bunkeTil = spill.getBunkeTil();
+		KortSamling bunkeFra = spill.getBunkeFra();
 
 		assertEquals(Spillere.SYD, syd.hvem());
 		assertEquals(Spillere.NORD, nord.hvem());
@@ -45,8 +44,8 @@ public class TestSpill {
 
 		spill.start();
 
-		Bunke bunkeTil = spill.getBunkeTil();
-		Bunke bunkeFra = spill.getBunkeFra();
+		KortSamling bunkeTil = spill.getBunkeTil();
+		KortSamling bunkeFra = spill.getBunkeFra();
 
 		int bunkefraantall = bunkeFra.getAntalKort();
 
@@ -87,7 +86,7 @@ public class TestSpill {
 		spill.start();
 		
 		ISpiller spiller = spill.getSyd();
-		Bunke bunkefra = spill.getBunkeFra();
+		KortSamling bunkefra = spill.getBunkeFra();
 		
 		int antallspiller = spiller.getAntallKort();
 		int antallbunke = bunkefra.getAntalKort();
@@ -109,7 +108,7 @@ public class TestSpill {
 		ISpiller spiller = spill.getSyd();
 		Kort kort = new Kort(Kortfarge.Hjerter,1);
 		
-		Bunke bunketil = spill.getBunkeTil();
+		KortSamling bunketil = spill.getBunkeTil();
 		int antallbunketil = bunketil.getAntalKort();
 		
 		spiller.leggTilKort(kort);

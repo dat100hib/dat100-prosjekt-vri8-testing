@@ -12,8 +12,7 @@ import org.junit.Test;
 import org.junit.rules.TestRule;
 import org.junit.rules.Timeout;
 
-import no.hvl.dat100.prosjekt.modell.Kort;
-import no.hvl.dat100.prosjekt.modell.Kortfarge;
+import no.hvl.dat100.prosjekt.modell.*;
 
 public class TestKortSamling {
 
@@ -23,7 +22,7 @@ public class TestKortSamling {
 	@Test
 	public void TestConstructor() {
 
-		TKortSamling samling = new TKortSamling();
+		KortSamling samling = new KortSamling();
 		
 		assertEquals(0, samling.getAntalKort());
 		
@@ -35,7 +34,7 @@ public class TestKortSamling {
 	@Test
 	public void TestleggTil() {
 
-		TKortSamling samling = new TKortSamling();
+		KortSamling samling = new KortSamling();
 		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
 		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
 		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
@@ -54,7 +53,7 @@ public class TestKortSamling {
 	@Test
 	public void TestseSiste() {
 
-		TKortSamling samling = new TKortSamling();
+		KortSamling samling = new KortSamling();
 		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
 		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
 		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
@@ -70,7 +69,7 @@ public class TestKortSamling {
 	@Test
 	public void TesttaSiste() {
 
-		TKortSamling samling = new TKortSamling();
+		KortSamling samling = new KortSamling();
 		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
 		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
 		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
@@ -86,7 +85,7 @@ public class TestKortSamling {
 	@Test
 	public void Testfjern() {
 
-		TKortSamling samling = new TKortSamling();
+		KortSamling samling = new KortSamling();
 		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
 		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
 		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
@@ -106,7 +105,7 @@ public class TestKortSamling {
 	@Test
 	public void TestfjernAlle() {
 
-		TKortSamling samling = new TKortSamling();
+		KortSamling samling = new KortSamling();
 		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
 		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
 		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
@@ -126,7 +125,7 @@ public class TestKortSamling {
 	@Test
 	public void Teststokk() {
 
-		TKortSamling samling = new TKortSamling();
+		KortSamling samling = new KortSamling();
 		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
 		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
 		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
@@ -145,7 +144,7 @@ public class TestKortSamling {
 	@Test
 	public void TesttoArrayList() {
 
-		TKortSamling samling = new TKortSamling();
+		KortSamling samling = new KortSamling();
 		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
 		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
 		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
@@ -161,5 +160,60 @@ public class TestKortSamling {
 		assertEquals(kort2, kortarray.get(1));
 		assertEquals(kort3, kortarray.get(2));
 
+	}
+	
+	@Test(timeout = 10000)
+	public void testleggTilSorter() {
+		
+		KortSamling hand = new KortSamling();
+		
+		Kort kort1 = new Kort(Kortfarge.Hjerter,1);
+		Kort kort2 = new Kort(Kortfarge.Hjerter,2);
+		Kort kort3 = new Kort(Kortfarge.Hjerter,3);
+		
+		hand.leggTilSorter(kort1);
+		hand.leggTilSorter(kort3);
+		hand.leggTilSorter(kort2);
+		
+		ArrayList<Kort> kortliste = hand.toArrayList();
+		
+		assertEquals(kort1, kortliste.get(0));
+		assertEquals(kort2, kortliste.get(1));
+		assertEquals(kort3, kortliste.get(2));
+		
+	}
+
+	@Test
+	public void Testtrekk() {
+		KortSamling bunke = new KortSamling();
+		Kort kort1 = new Kort(Kortfarge.Hjerter,1);
+		Kort kort2 = new Kort(Kortfarge.Hjerter,2);
+		Kort kort3 = new Kort(Kortfarge.Hjerter,3);
+		
+		bunke.leggTil(kort1);
+		bunke.leggTil(kort2);
+		bunke.leggTil(kort3);
+		
+		Kort kort = bunke.trekk();
+		
+		assertEquals(kort3,kort);
+		assertEquals(2, bunke.getAntalKort());
+	}
+	
+	@Test
+	public void Testtopp() {
+		KortSamling bunke = new KortSamling();
+		Kort kort1 = new Kort(Kortfarge.Hjerter,1);
+		Kort kort2 = new Kort(Kortfarge.Hjerter,2);
+		Kort kort3 = new Kort(Kortfarge.Hjerter,3);
+		
+		bunke.leggTil(kort1);
+		bunke.leggTil(kort2);
+		bunke.leggTil(kort3);
+		
+		Kort kort = bunke.topp();
+		
+		assertEquals(kort3, kort);
+		assertEquals(3, bunke.getAntalKort());
 	}
 }
