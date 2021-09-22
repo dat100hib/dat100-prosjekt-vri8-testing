@@ -20,6 +20,8 @@ https://github.com/dat100hib/dat100public/blob/master/programmering/jplab7/JP7.m
 
 Kommentarene i koden for `KortSamling` beskriver hva de ulike metodene skal gjøre.
 
+Begynn med å implementere konstruktøren og metodene `erTom`, `getSamling`, `getAntall` og `leggTil` før du begynner å teste.
+
 Test metodene som implementeres i `KortSamling`-klassen ved å bruke enhetstestene for klassen som finnes i pakken `no.hvl.dat100.prosjekt.modell.tester.`
 
 ### Oppgave 1.3 - Stokke kort og ArrayList

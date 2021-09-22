@@ -3,7 +3,6 @@ package no.hvl.dat100.prosjekt.modell.tester;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
@@ -23,23 +22,26 @@ class TestKortUtils {
 	@Rule
 	public TestRule globalTimeout = Timeout.seconds(30); 
 
+	private Kort kort1,kort2,kort3;
+	private KortSamling hand;
 	
 	@BeforeEach
 	void setUp() throws Exception {
-	}
-
-	public void testleggTilSorter() {
 		
-		KortSamling hand = new KortSamling();
+		hand = new KortSamling();
 		
-		Kort kort1 = new Kort(Kortfarge.Hjerter,1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter,2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter,3);
+		kort1 = new Kort(Kortfarge.Hjerter,1);
+		kort2 = new Kort(Kortfarge.Hjerter,2);
+		kort3 = new Kort(Kortfarge.Hjerter,3);
 		
 		hand.leggTil(kort1);
 		hand.leggTil(kort3);
 		hand.leggTil(kort2);
-		
+	}
+
+	@Test
+	public void testsorter() {
+			
 		KortUtils.sorter(hand);
 		ArrayList<Kort> kortliste = KortUtils.toArrayList(hand);
 		
@@ -50,44 +52,29 @@ class TestKortUtils {
 	}
 
 	@Test
-	public void TesttoArrayList() {
+	public void Teststokk() {
 
-		KortSamling samling = new KortSamling();
-		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
-
-		samling.leggTil(kort1);
-		samling.leggTil(kort2);
-		samling.leggTil(kort3);
-
-		ArrayList<Kort> kortarray = KortUtils.toArrayList(samling);
-
-		assertEquals(3, kortarray.size());
-		assertEquals(kort1, kortarray.get(0));
-		assertEquals(kort2, kortarray.get(1));
-		assertEquals(kort3, kortarray.get(2));
-
+		KortUtils.stokk(hand);
+		
+		assertEquals(3, hand.getAntalKort());
+		
+		assertTrue(hand.har(kort1));
+		assertTrue(hand.har(kort2));
+		assertTrue(hand.har(kort3));
+		
+		assertFalse(hand.har(null));
 	}
 	
 	@Test
-	public void Teststokk() {
+	public void TesttoArrayList() {
 
-		KortSamling samling = new KortSamling();
-		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
+		ArrayList<Kort> kortarray = KortUtils.toArrayList(hand);
 
-		samling.leggTil(kort1);
-		samling.leggTil(kort2);
-		samling.leggTil(kort3);
+		assertEquals(3, kortarray.size());
+		assertEquals(kort1, kortarray.get(0));
+		assertEquals(kort3, kortarray.get(1));
+		assertEquals(kort2, kortarray.get(2));
 
-		KortUtils.stokk(samling);
-		
-		assertEquals(3, samling.getAntalKort());
-		assertTrue(samling.har(kort1));
-		assertTrue(samling.har(kort2));
-		assertTrue(samling.har(kort3));
-		assertFalse(samling.har(null));
 	}
+	
 }

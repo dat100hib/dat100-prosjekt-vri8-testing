@@ -50,10 +50,10 @@ public class TestSpill {
 		int bunkefraantall = bunkeFra.getAntalKort();
 
 		while (!bunkeFra.erTom()) {
-			bunkeTil.leggTil(bunkeFra.trekk());
+			bunkeTil.leggTil(bunkeFra.taSiste());
 		}
 
-		Kort overst = bunkeTil.topp();
+		Kort overst = bunkeTil.seSiste();
 
 		spill.snuTilBunken();
 
@@ -61,7 +61,7 @@ public class TestSpill {
 		bunkeFra = spill.getBunkeFra();
 
 		assertEquals(1, bunkeTil.getAntalKort());
-		assertEquals(overst, bunkeTil.topp());
+		assertEquals(overst, bunkeTil.seSiste());
 		assertEquals(bunkefraantall, bunkeFra.getAntalKort());
 
 	}
@@ -117,7 +117,7 @@ public class TestSpill {
 		
 		assertEquals(antallbunketil+1, bunketil.getAntalKort());
 		assertEquals(antallkortsspiller-1, spiller.getAntallKort());
-		assertEquals(kort, bunketil.topp());
+		assertEquals(kort, bunketil.seSiste());
 	}
 	
 	@Test

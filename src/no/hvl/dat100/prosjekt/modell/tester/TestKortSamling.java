@@ -5,10 +5,9 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertNotNull;
 
-import java.util.ArrayList;
-
 import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.rules.TestRule;
 import org.junit.rules.Timeout;
 
@@ -18,6 +17,23 @@ public class TestKortSamling {
 
 	@Rule
 	public TestRule globalTimeout = Timeout.seconds(30); 
+
+	private Kort kort1,kort2,kort3;
+	private KortSamling samling;
+	
+	@BeforeEach
+	void setUp() throws Exception {
+		
+		samling = new KortSamling();
+		
+		kort1 = new Kort(Kortfarge.Hjerter,1);
+		kort2 = new Kort(Kortfarge.Hjerter,2);
+		kort3 = new Kort(Kortfarge.Hjerter,3);
+		
+		samling.leggTil(kort1);
+		samling.leggTil(kort3);
+		samling.leggTil(kort2);
+	}
 
 	@Test
 	public void TestConstructor() {
@@ -34,91 +50,52 @@ public class TestKortSamling {
 	@Test
 	public void TestleggTil() {
 
-		KortSamling samling = new KortSamling();
-		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
-
-		samling.leggTil(kort1);
-		samling.leggTil(kort2);
-		samling.leggTil(kort3);
-
 		assertEquals(3, samling.getAntalKort());
+		
 		assertTrue(samling.har(kort1));
 		assertTrue(samling.har(kort2));
 		assertTrue(samling.har(kort3));
+		
 		assertFalse(samling.har(null));
 	}
 
 	@Test
 	public void TestseSiste() {
 
-		KortSamling samling = new KortSamling();
-		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
-
-		samling.leggTil(kort1);
-		samling.leggTil(kort2);
-		samling.leggTil(kort3);
-
-		assertEquals(kort3, samling.seSiste());
+		assertEquals(kort2, samling.seSiste());
+		
 		assertEquals(3, samling.getAntalKort());
 	}
 
 	@Test
 	public void TesttaSiste() {
 
-		KortSamling samling = new KortSamling();
-		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
-
-		samling.leggTil(kort1);
-		samling.leggTil(kort2);
-		samling.leggTil(kort3);
-
-		assertEquals(kort3, samling.taSiste());
+		assertEquals(kort2, samling.taSiste());
+		
 		assertEquals(2, samling.getAntalKort());
 	}
 
 	@Test
 	public void Testfjern() {
 
-		KortSamling samling = new KortSamling();
-		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
-
-		samling.leggTil(kort1);
-		samling.leggTil(kort2);
-		samling.leggTil(kort3);
-
 		samling.fjern(kort2);
 
 		assertTrue(samling.har(kort1));
 		assertFalse(samling.har(kort2));
 		assertTrue(samling.har(kort3));
+		
 		assertFalse(samling.har(null));
 	}
 
 	@Test
 	public void TestfjernAlle() {
 
-		KortSamling samling = new KortSamling();
-		Kort kort1 = new Kort(Kortfarge.Hjerter, 1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter, 2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter, 3);
-
-		samling.leggTil(kort1);
-		samling.leggTil(kort2);
-		samling.leggTil(kort3);
-
 		samling.fjernAlle();
 
 		assertFalse(samling.har(kort1));
 		assertFalse(samling.har(kort2));
 		assertFalse(samling.har(kort3));
+		
 		assertTrue(samling.erTom());
 	}
 }
