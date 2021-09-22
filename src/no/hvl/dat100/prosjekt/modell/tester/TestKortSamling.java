@@ -121,38 +121,4 @@ public class TestKortSamling {
 		assertFalse(samling.har(kort3));
 		assertTrue(samling.erTom());
 	}
-	
-	@Test
-	public void Testtrekk() {
-		KortSamling bunke = new KortSamling();
-		Kort kort1 = new Kort(Kortfarge.Hjerter,1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter,2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter,3);
-		
-		bunke.leggTil(kort1);
-		bunke.leggTil(kort2);
-		bunke.leggTil(kort3);
-		
-		Kort kort = bunke.trekk();
-		
-		assertEquals(kort3,kort);
-		assertEquals(2, bunke.getAntalKort());
-	}
-	
-	@Test
-	public void Testtopp() {
-		KortSamling bunke = new KortSamling();
-		Kort kort1 = new Kort(Kortfarge.Hjerter,1);
-		Kort kort2 = new Kort(Kortfarge.Hjerter,2);
-		Kort kort3 = new Kort(Kortfarge.Hjerter,3);
-		
-		bunke.leggTil(kort1);
-		bunke.leggTil(kort2);
-		bunke.leggTil(kort3);
-		
-		Kort kort = bunke.topp();
-		
-		assertEquals(kort3, kort);
-		assertEquals(3, bunke.getAntalKort());
-	}
 }

@@ -1,6 +1,6 @@
 ## Oppgave 1: Ferdiggjøre implementasjon av KortSamling, Hand og Bunke
 
-Den første oppgaven er å ferdiggjøre implementasjon av klassen `KortSamling` i `modell`-pakken `no.hvl.dat100.prosjekt.modell`.
+Den første oppgaven er å ferdiggjøre implementasjon av klassen `KortSamling` i `modell`-pakken `no.hvl.dat100.prosjekt.modell` samt noen hjelpemetoder i `KortUtils`klassen.
 
 ### Oppgave 1.1 - Studer klassene Kort og Kortfarge
 
@@ -21,3 +21,19 @@ https://github.com/dat100hib/dat100public/blob/master/programmering/jplab7/JP7.m
 Kommentarene i koden for `KortSamling` beskriver hva de ulike metodene skal gjøre.
 
 Test metodene som implementeres i `KortSamling`-klassen ved å bruke enhetstestene for klassen som finnes i pakken `no.hvl.dat100.prosjekt.modell.tester.`
+
+### Oppgave 1.3 - Stokke kort og ArrayList
+
+I klassen `KortUtils` finnes allerede en metode som kan sortere en samling av kort. Denne brukes i spillet til å sorter handen for nord og syd.
+
+Implementer metoden `stokk` (som skal brukes til å stokke kort).**Hint** her for du bruk for `Random`-klassen i Java.
+
+Implementer hjelpe-metoden `toArrayList` som skal brukes ulike plasser i spillet. Se dokumentasjon for klassen `ArrayList`
+
+https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
+
+for å finne ut hvordan et element legges til en `ArrayList`. En `ArrayList` for å lagre objekter av klassen `Kort` kan opprette med:
+
+```java
+ArrayList<Kort> list = new ArrayList<Kort>();
+```
