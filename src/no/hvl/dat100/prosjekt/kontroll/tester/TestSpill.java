@@ -34,7 +34,7 @@ public class TestSpill {
 		assertEquals(Spill.ANTALL_KORT_START, nord.getAntallKort());
 
 		assertEquals(1, bunkeTil.getAntalKort());
-		assertEquals(KortSamling.MAKS_KORT_FARGE * 4 - (Spill.ANTALL_KORT_START * 2) - 1, bunkeFra.getAntalKort());
+		assertEquals(Regler.MAKS_KORT_FARGE * 4 - (Spill.ANTALL_KORT_START * 2) - 1, bunkeFra.getAntalKort());
 
 	}
 
@@ -75,7 +75,7 @@ public class TestSpill {
 		assertFalse(spill.bunketilTom());
 		assertFalse(spill.bunkefraTom());
 		assertEquals(Spill.ANTALL_KORT_START, spill.antallNord());
-		assertEquals(KortSamling.MAKS_KORT_FARGE * 4 - (Spill.ANTALL_KORT_START * 2) - 1, spill.antallBunkeFra());
+		assertEquals(Regler.MAKS_KORT_FARGE * 4 - (Spill.ANTALL_KORT_START * 2) - 1, spill.antallBunkeFra());
 		assertEquals(1, spill.antallBunkeTil());
 	}
 	

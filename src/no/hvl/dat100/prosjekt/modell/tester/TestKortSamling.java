@@ -21,8 +21,7 @@ public class TestKortSamling {
 	private Kort kort1,kort2,kort3;
 	private KortSamling samling;
 	
-	@BeforeEach
-	void setUp() throws Exception {
+	private void setUp() {
 		
 		samling = new KortSamling();
 		
@@ -39,17 +38,19 @@ public class TestKortSamling {
 	public void TestConstructor() {
 
 		KortSamling samling = new KortSamling();
+				
+		Kort[] samlingen = samling.getSamling();
+				
+		assertNotNull(samlingen);
 		
 		assertEquals(0, samling.getAntalKort());
-		
-		Kort[] samlingen = samling.getSamling();
-		assertNotNull(samlingen);
-		assertTrue(samling.erTom());
-	}
 
+	}
+	
 	@Test
 	public void TestleggTil() {
 
+		setUp();
 		assertEquals(3, samling.getAntalKort());
 		
 		assertTrue(samling.har(kort1));
@@ -60,8 +61,24 @@ public class TestKortSamling {
 	}
 
 	@Test
+	public void erTom() {
+
+		KortSamling samling = new KortSamling();
+
+		assertTrue(samling.erTom());
+		
+		Kort kort = new Kort(Kortfarge.Hjerter,1);
+		
+		samling.leggTil(kort);
+		
+		assertFalse(samling.erTom());
+		
+	}
+	
+	@Test
 	public void TestseSiste() {
 
+		setUp();
 		assertEquals(kort2, samling.seSiste());
 		
 		assertEquals(3, samling.getAntalKort());
@@ -70,6 +87,7 @@ public class TestKortSamling {
 	@Test
 	public void TesttaSiste() {
 
+		setUp();
 		assertEquals(kort2, samling.taSiste());
 		
 		assertEquals(2, samling.getAntalKort());
@@ -78,6 +96,7 @@ public class TestKortSamling {
 	@Test
 	public void Testfjern() {
 
+		setUp();
 		samling.fjern(kort2);
 
 		assertTrue(samling.har(kort1));
@@ -90,6 +109,7 @@ public class TestKortSamling {
 	@Test
 	public void TestfjernAlle() {
 
+		setUp();	
 		samling.fjernAlle();
 
 		assertFalse(samling.har(kort1));
