@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import no.hvl.dat100.prosjekt.kontroll.FirstFitSpiller;
+import no.hvl.dat100.prosjekt.kontroll.SydSpiller;
 import no.hvl.dat100.prosjekt.kontroll.Handling;
 import no.hvl.dat100.prosjekt.kontroll.HandlingsType;
 import no.hvl.dat100.prosjekt.kontroll.Spiller;
@@ -12,7 +12,7 @@ import no.hvl.dat100.prosjekt.kontroll.Spillere;
 import no.hvl.dat100.prosjekt.modell.Kort;
 import no.hvl.dat100.prosjekt.modell.Kortfarge;
 
-public class TestFirstFitSpiller {
+public class TestSydSpiller {
 
 	@Test
 	public void TestTomKonstruktor() {
@@ -28,7 +28,7 @@ public class TestFirstFitSpiller {
 	@Test
 	public void TestKonstruktor() {
 		
-		FirstFitSpiller spiller = new FirstFitSpiller(Spillere.SYD);
+		SydSpiller spiller = new SydSpiller(Spillere.SYD);
 		
 		assertEquals(0, spiller.getAntallKort());
 		assertEquals(0, spiller.getHand().getAntalKort());
@@ -39,7 +39,7 @@ public class TestFirstFitSpiller {
 	@Test
 	public void TestnesteHandlingTom() {
 		
-		FirstFitSpiller spiller = new FirstFitSpiller(Spillere.SYD);
+		SydSpiller spiller = new SydSpiller(Spillere.SYD);
 		
 		assertTrue(spiller.getHand().erTom());
 		
@@ -51,7 +51,7 @@ public class TestFirstFitSpiller {
 	@Test
 	public void TestnesteHandlingKort() {
 		
-		FirstFitSpiller spiller = new FirstFitSpiller(Spillere.SYD);
+		SydSpiller spiller = new SydSpiller(Spillere.SYD);
 		
 		Kort kort1 = new Kort (Kortfarge.Hjerter,9);
 		Kort kort2 = new Kort (Kortfarge.Spar,10);
@@ -71,7 +71,7 @@ public class TestFirstFitSpiller {
 	@Test
 	public void TestnesteHandlingTrekk() {
 		
-		FirstFitSpiller spiller = new FirstFitSpiller(Spillere.SYD);
+		SydSpiller spiller = new SydSpiller(Spillere.SYD);
 		
 		Kort kort1 = new Kort (Kortfarge.Hjerter,9);
 		Kort kort2 = new Kort (Kortfarge.Spar,10);
@@ -89,7 +89,7 @@ public class TestFirstFitSpiller {
 	@Test
 	public void TestnesteHandlingForbi() {
 		
-		FirstFitSpiller spiller = new FirstFitSpiller(Spillere.SYD);
+		SydSpiller spiller = new SydSpiller(Spillere.SYD);
 		
 		Kort kort1 = new Kort (Kortfarge.Hjerter,9);
 		Kort kort2 = new Kort (Kortfarge.Spar,10);
