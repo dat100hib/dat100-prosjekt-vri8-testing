@@ -149,7 +149,7 @@ public class TestKortSamling {
 
 		setUp();
 		
-		samling.fjern(kort2);
+		assertTrue(samling.fjern(kort2));
 		
 		assertEquals(2, samling.getAntalKort());
 		assertTrue(samling.har(kort1));
@@ -159,7 +159,7 @@ public class TestKortSamling {
 		
 		// fjern kort som ikke finnes
 		Kort kort = new Kort(Kortfarge.Spar,1);
-		samling.fjern(kort);
+		assertFalse(samling.fjern(kort));
 		
 		assertEquals(2, samling.getAntalKort());
 		assertTrue(samling.har(kort1));
@@ -168,14 +168,14 @@ public class TestKortSamling {
 		assertFalse(samling.har(null));
 		
 		// fjerne null kort
-		samling.fjern(null);
+		assertFalse(samling.fjern(null));
 		assertEquals(2, samling.getAntalKort());
 		assertTrue(samling.har(kort1));
 		assertFalse(samling.har(kort2));
 		assertTrue(samling.har(kort3));
 		assertFalse(samling.har(null));
 				
-		samling.fjern(kort1);
+		assertTrue(samling.fjern(kort1));
 		
 		assertEquals(1, samling.getAntalKort());
 		assertFalse(samling.har(kort1));
@@ -184,7 +184,7 @@ public class TestKortSamling {
 		assertFalse(samling.har(null));
 		
 		
-		samling.fjern(kort3);
+		assertTrue(samling.fjern(kort3));
 		
 		assertEquals(0, samling.getAntalKort());
 		assertFalse(samling.har(kort1));
@@ -193,7 +193,7 @@ public class TestKortSamling {
 		assertFalse(samling.har(null));
 		
 		// fjern fra tom samling
-		samling.fjern(kort);
+		assertFalse(samling.fjern(kort));
 		assertEquals(0, samling.getAntalKort());
 		assertFalse(samling.har(kort1));
 		assertFalse(samling.har(kort2));
