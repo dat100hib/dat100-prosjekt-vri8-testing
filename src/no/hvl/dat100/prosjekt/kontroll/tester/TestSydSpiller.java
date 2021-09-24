@@ -5,10 +5,10 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import no.hvl.dat100.prosjekt.kontroll.SydSpiller;
-import no.hvl.dat100.prosjekt.kontroll.Handling;
-import no.hvl.dat100.prosjekt.kontroll.HandlingsType;
+import no.hvl.dat100.prosjekt.kontroll.spill.Handling;
+import no.hvl.dat100.prosjekt.kontroll.spill.HandlingsType;
+import no.hvl.dat100.prosjekt.kontroll.spill.Spillere;
 import no.hvl.dat100.prosjekt.kontroll.Spiller;
-import no.hvl.dat100.prosjekt.kontroll.Spillere;
 import no.hvl.dat100.prosjekt.modell.Kort;
 import no.hvl.dat100.prosjekt.modell.Kortfarge;
 

@@ -2,7 +2,7 @@ package no.hvl.dat100.prosjekt.kontroll.tester;
 
 import org.junit.Test;
 
-import no.hvl.dat100.prosjekt.kontroll.Kontroll;
+import no.hvl.dat100.prosjekt.kontroll.spill.Kontroll;
 
 public class TestKontroll {
 

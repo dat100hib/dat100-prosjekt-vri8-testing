@@ -6,9 +6,9 @@ import static org.junit.Assert.assertFalse;
 import org.junit.Test;
 
 import no.hvl.dat100.prosjekt.kontroll.ISpiller;
-import no.hvl.dat100.prosjekt.kontroll.Regler;
 import no.hvl.dat100.prosjekt.kontroll.Spill;
-import no.hvl.dat100.prosjekt.kontroll.Spillere;
+import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
+import no.hvl.dat100.prosjekt.kontroll.spill.Spillere;
 import no.hvl.dat100.prosjekt.modell.KortSamling;
 import no.hvl.dat100.prosjekt.modell.Kort;
 import no.hvl.dat100.prosjekt.modell.Kortfarge;
@@ -24,8 +24,8 @@ public class TestSpill {
 		ISpiller syd = spill.getSyd();
 		ISpiller nord = spill.getNord();
 
-		KortSamling bunkeTil = spill.getBunkeTil();
-		KortSamling bunkeFra = spill.getBunkeFra();
+		KortSamling bunkeTil = spill.getBord().getBunkeTil();
+		KortSamling bunkeFra = spill.getBord().getBunkeFra();
 
 		assertEquals(Spillere.SYD, syd.hvem());
 		assertEquals(Spillere.NORD, nord.hvem());
@@ -44,8 +44,8 @@ public class TestSpill {
 
 		spill.start();
 
-		KortSamling bunkeTil = spill.getBunkeTil();
-		KortSamling bunkeFra = spill.getBunkeFra();
+		KortSamling bunkeTil = spill.getBord().getBunkeTil();
+		KortSamling bunkeFra = spill.getBord().getBunkeFra();
 
 		int bunkefraantall = bunkeFra.getAntalKort();
 
@@ -55,10 +55,10 @@ public class TestSpill {
 
 		Kort overst = bunkeTil.seSiste();
 
-		spill.snuTilBunken();
+		spill.getBord().snuTilBunken();
 
-		bunkeTil = spill.getBunkeTil();
-		bunkeFra = spill.getBunkeFra();
+		bunkeTil = spill.getBord().getBunkeTil();
+		bunkeFra = spill.getBord().getBunkeFra();
 
 		assertEquals(1, bunkeTil.getAntalKort());
 		assertEquals(overst, bunkeTil.seSiste());
@@ -72,11 +72,11 @@ public class TestSpill {
 
 		spill.start();
 		
-		assertFalse(spill.bunketilTom());
-		assertFalse(spill.bunkefraTom());
+		assertFalse(spill.getBord().bunketilTom());
+		assertFalse(spill.getBord().bunkefraTom());
 		assertEquals(Spill.ANTALL_KORT_START, spill.antallNord());
-		assertEquals(Regler.MAKS_KORT_FARGE * 4 - (Spill.ANTALL_KORT_START * 2) - 1, spill.antallBunkeFra());
-		assertEquals(1, spill.antallBunkeTil());
+		assertEquals(Regler.MAKS_KORT_FARGE * 4 - (Spill.ANTALL_KORT_START * 2) - 1, spill.getBord().antallBunkeFra());
+		assertEquals(1, spill.getBord().antallBunkeTil());
 	}
 	
 	@Test
@@ -86,7 +86,7 @@ public class TestSpill {
 		spill.start();
 		
 		ISpiller spiller = spill.getSyd();
-		KortSamling bunkefra = spill.getBunkeFra();
+		KortSamling bunkefra = spill.getBord().getBunkeFra();
 		
 		int antallspiller = spiller.getAntallKort();
 		int antallbunke = bunkefra.getAntalKort();
@@ -108,7 +108,7 @@ public class TestSpill {
 		ISpiller spiller = spill.getSyd();
 		Kort kort = new Kort(Kortfarge.Hjerter,1);
 		
-		KortSamling bunketil = spill.getBunkeTil();
+		KortSamling bunketil = spill.getBord().getBunkeTil();
 		int antallbunketil = bunketil.getAntalKort();
 		
 		spiller.leggTilKort(kort);

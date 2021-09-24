@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.rules.TestRule;
 import org.junit.rules.Timeout;
 
-import no.hvl.dat100.prosjekt.kontroll.Regler;
+import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
 import no.hvl.dat100.prosjekt.modell.*;
 
 public class TestKortSamling {

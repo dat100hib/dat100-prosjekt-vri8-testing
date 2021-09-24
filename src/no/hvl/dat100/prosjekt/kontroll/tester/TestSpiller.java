@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import no.hvl.dat100.prosjekt.kontroll.Spiller;
-import no.hvl.dat100.prosjekt.kontroll.Spillere;
+import no.hvl.dat100.prosjekt.kontroll.spill.Spillere;
 import no.hvl.dat100.prosjekt.modell.Kort;
 import no.hvl.dat100.prosjekt.modell.Kortfarge;
 
