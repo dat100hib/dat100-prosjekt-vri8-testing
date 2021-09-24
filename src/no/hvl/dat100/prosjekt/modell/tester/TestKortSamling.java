@@ -201,4 +201,25 @@ public class TestKortSamling {
 		assertFalse(samling.har(null));
 		
 	}
+	
+	@Test
+	public void TestgetAlleKort() {
+
+		KortSamling tomsamling = new KortSamling();
+		
+		Kort[] allekort = tomsamling.getAllekort();
+		
+		assertNotNull(allekort);
+		assertEquals(0,allekort.length);
+		
+		setUp();
+		
+		allekort = samling.getAllekort();
+		assertEquals(3,allekort.length);
+		
+		assertEquals(kort1,allekort[0]);
+		assertEquals(kort3,allekort[1]);
+		assertEquals(kort2,allekort[2]);
+		
+	}
 }

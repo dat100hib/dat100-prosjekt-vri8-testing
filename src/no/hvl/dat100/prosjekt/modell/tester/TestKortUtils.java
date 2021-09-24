@@ -2,6 +2,7 @@ package no.hvl.dat100.prosjekt.modell.tester;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -98,20 +99,5 @@ class TestKortUtils {
 		assertTrue(samling.har(kort));
 		
 	}
-	
-	@Test
-	public void TesttoArrayList() {
-
-		ArrayList<Kort> kortarray = KortUtils.toArrayList(hand);
-
-		assertEquals(3, kortarray.size());
-		assertEquals(kort1, kortarray.get(0));
-		assertEquals(kort3, kortarray.get(1));
-		assertEquals(kort2, kortarray.get(2));
 		
-		KortSamling samling = new KortSamling();
-		kortarray = KortUtils.toArrayList(samling);
-		assertEquals(0, kortarray.size());
-	}
-	
 }
