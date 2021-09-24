@@ -15,6 +15,8 @@ import no.hvl.dat100.prosjekt.modell.Kortfarge;
 
 public class TestSpill {
 
+	// TODO - legg til test av konstruktør
+	
 	@Test
 	public void Teststart() {
 		Spill spill = new Spill();
@@ -38,33 +40,7 @@ public class TestSpill {
 
 	}
 
-	@Test
-	public void TestsnuBunken() {
-		Spill spill = new Spill();
 
-		spill.start();
-
-		KortSamling bunkeTil = spill.getBord().getBunkeTil();
-		KortSamling bunkeFra = spill.getBord().getBunkeFra();
-
-		int bunkefraantall = bunkeFra.getAntalKort();
-
-		while (!bunkeFra.erTom()) {
-			bunkeTil.leggTil(bunkeFra.taSiste());
-		}
-
-		Kort overst = bunkeTil.seSiste();
-
-		spill.getBord().snuTilBunken();
-
-		bunkeTil = spill.getBord().getBunkeTil();
-		bunkeFra = spill.getBord().getBunkeFra();
-
-		assertEquals(1, bunkeTil.getAntalKort());
-		assertEquals(overst, bunkeTil.seSiste());
-		assertEquals(bunkefraantall, bunkeFra.getAntalKort());
-
-	}
 
 	@Test
 	public void TestHenteMetoder() {
