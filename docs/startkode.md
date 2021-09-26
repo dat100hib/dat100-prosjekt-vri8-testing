@@ -2,7 +2,9 @@
 
 Dere skal ta utgangpunkt i to Eclipse-prosjekt med Java-kode.
 
-Det ene Eclipse-prosjekt inneholder en rekke Java-klasser som utgjør rammen rundt en spill-applikasjonen. Dere trenger ikke å legge til nye klasser, men dere skal implementere ulike metoder i klassene som er gitt. Det andre Eclipse-prosjektet inneholder en rekke enhetstester som skal bruke til automatisk å teste den koden dere skriver.
+Det ene Eclipse-prosjekt inneholder en rekke Java-klasser som utgjør rammen rundt en spill-applikasjonen. Dere trenger ikke å legge til nye klasser, men dere skal implementere ulike metoder i klassene som er gitt.
+
+Det andre Eclipse-prosjektet inneholder en rekke enhetstester som skal bruke til automatisk å teste den koden dere skriver.
 
 Fremgangsmåten for å importere Java-koden inn i Eclipse er beskrevet nedenfor og også vist i video som er lagt ut på Canvas:
 
@@ -24,7 +26,7 @@ Begynn med å opprette en kopi av denne oppbevaringsplassen ved å bruke **fork*
 
 ### Klone og importere startkode i Eclipse
 
-Du må nå laste ned (klone) oppbevaringsplassen med kode som du opprettet ovenfor. Det er **viktig** at du **ikke** kloner https://github.com/dat100hib/dat100-prosjekt-startkode-2021 men kloner den oppbevaringsplassen som du opprettet på din egen konto da du utførte fork ovenfor.
+Du må nå **klone** (laste ned) oppbevaringsplassen med kode som du opprettet ovenfor. Det er **viktig** at du **ikke** kloner https://github.com/dat100hib/dat100-prosjekt-startkode-2021, men kloner den oppbevaringsplassen som du opprettet på din egen konto da du utførte fork ovenfor.
 
 1.	Velg *Code* på github-siden
 
@@ -36,15 +38,15 @@ Eclipse-prosjektet er organisert i et antall pakker med en pakke til hver av opp
 
 De steder i koden hvor der skal implementeres Java-kode er merket med en kommenter og teksten `TODO`. Disse plassene i koden kan lett identifiseres ved at de gir en blå markering i høyresiden av editor-vinduet i Eclipse.
 
-For å kjøre det enklere ifm. presentasjon av oppgaven å finne de plassene hvor dere har lagt til kode, anbefales det å la kommentarene med `TODO – START` og `TODO SLUTT` bli stående i koden.  
+For å gjøre det enklere ifm. presentasjon av oppgaven å finne de plassene hvor dere har lagt til kode, anbefales det å la kommentarene med `TODO – START` og `TODO SLUTT` bli stående i koden.  
 
 ### Java-kildekoden for implementasjonen av spillet
 
-Overordnet er implementasjon oppdelt etter en arkitektur som kalles modell-utsyn-kontroll som er en ofte brukt måte å strukturere en applikasjon på. Man kan lese mere om dette generelle programvarearkitekturprinsippet i Javaboken (Kapittel 15.8).
+Overordnet er implementasjon oppdelt etter en arkitektur som kalles *modell-utsyn-kontroll* som er en ofte brukt måte å strukturere en større applikasjon på. Man kan lese mere om dette generelle programvarearkitekturprinsippet i Javaboken (Kapittel 15.8).
 
 Konkret i dette prosjektet betyr det at koden er organisert i tre pakker:
 
--	`no.hvl.dat100.prosjekt.modell` med de klasser som implementerer de basale data-strukturer vi skal bruke i spillet som bunke, hand, kort, kortfarge og kortsamling.
+-	`no.hvl.dat100.prosjekt.modell` med klasser som implementerer de basale data-strukturer vi skal bruke i spillet som bunke, hand, kort, kortfarge og kortsamling.
 -	`no.hvl.dat100.prosjekt.utsyn` med de klasser som implementerer det grafiske bruker-grensesnittet, herunder viser informasjon og fanger opp hendelser når der klikkes på knapper.
 -	`no.hvl.dat100.prosjekt.kontroll` som inneholder de klasser som implementerer logikken i kortspillet, herunder hvem som har tur og hvilke regler som gjelder for spillet.
 
@@ -66,14 +68,14 @@ https://github.com/dat100hib/dat100-prosjekt-testing-2021
 
 ## Klone og importere enhetstester i Eclipse
 
-Du kloner oppbevaringsplassen og importerer inn i Eclipse på samme måten som tidligere, men nå med oppbevaringsplassen gitt i lenken ovenfor. Du trenger **ikke** å gjøre fork på denne oppbevaringsplassen først siden du ikke trenger din egen kopi av oppbevaringsplassen på github.
+Du **kloner** oppbevaringsplassen og importerer inn i Eclipse på samme måten som tidligere, men nå med oppbevaringsplassen gitt i lenken ovenfor. Du trenger **ikke** å gjøre fork på denne oppbevaringsplassen først siden du ikke trenger din egen kopi av oppbevaringsplassen på github.
 
 Du skal nå ha et prosjekt i Eclipse med navnet `dat100prosjekt-testing` som inneholder en rekke enhetstester (unit-tests) implementert ved bruk av rammeverket JUnit. Det er ikke et krav i prosjektet å legge til flere enhetstester.
 
 Enhets-test for implementasjonen er organisert i to pakker:
 
 -	`no.hvl.dat100.prosjekt.modell.tester` som inneholder enhetstest for klassene i modell-pakken som skal implementeres i oppgave 1.
--	`no.hvl.dat100.prosjekt.modell.kontroll` som inneholder enhetstest for klas-sene i kontroll-pakken som skal implementeres i oppgave 2 og 3.
+-	`no.hvl.dat100.prosjekt.modell.kontroll` som inneholder enhetstest for klassene i kontroll-pakken som skal implementeres i oppgave 2 og 3.
 
 Konvensjonen er at enhetstester for en klasse `X.java` er implementert i filen med navn `TestX`.java. Eksempelvis inneholder klassen `TestKortSamling.java` enhetstester for klassen `KortSamling.java` hvor dere skal implementere metoder.
 
@@ -83,14 +85,14 @@ En test-klasse med enhetstest utføres ved å velge test-klassen etterfulgt av *
 
 Det er god/anbefalt praksis å gjenta testene når det gjøres endringer/forbedringer i implementasjonen av en metode. Det anbefales også å teste etterhvert som de enkelte metoder implementeres. Enhetstestene er ikke komplette, men tester basale ting for metodene i de klasser som dere skal implementere.
 
-Enhetstestene er ikke komplette, men tester basale ting for metodene i de klasser som dere skal implementere. Enhetstesting og test-drevet utvikling er et tema senere i studiet og det er et generellt godt ingeniørprinsipp å teste komponentene sine før de settes sammen til et større system.
-
 Etterhvert som de grunnleggende metoder implementeres kan applikasjonen også testes via det grafiske brukergrensesnitt.
 
-Enhetstesting og test-drevet utvikling er et tema senere i studiet og det er et generelt godt ingeniørprinsipp å teste komponentene sine før de settes sammen til et større system.
+Enhetstesting og test-drevet utvikling er et tema senere i studiet og det er et generellt godt ingeniørprinsipp å teste komponentene sine før de settes sammen til et større system.
 
 ## Dele oppbevaringsplass mellom gruppemedlemmer
 
-Hvis gruppen ønsker å bruke en felles github-oppbevaringsplass for koden som utvikles, er det tilstrekkelig at en i gruppen utfører steg 1 ovenfor og gir de andre medlemmene i gruppen tilgang til oppbevaringsplassen (repository). Dette kan gjøres ved å logge inn på https://www.github.com, gå til oppbevaringsplassen og via *Settings* og *Manage access* for oppbevaringsplassen legge til de andre medlemmer i gruppen som *Collaborators*.
+Det enbefales at gruppen bruker en felles github-oppbevaringsplass for koden som utvikles. Det er derfor tilstrekkelig at en i gruppen utfører steg 1 ovenfor og gir de andre medlemmene i gruppen tilgang til oppbevaringsplassen (repository). Dette kan gjøres ved å logge inn på https://www.github.com, gå til oppbevaringsplassen og via *Settings* og *Manage access* for oppbevaringsplassen og legge til de andre medlemmer i gruppen som *Collaborators*.
 
 De andre gruppemedlemmene må da klone oppbevaringsplassen ned på egen PC ved å velge *File → Import → Git → Projects from Git → Clone URI* i Eclipse og lime inn URL’en til den felles oppbevaringsplassen. Endringer i filer i prosjektet lastes opp til den felles oppbevaringsplassen ved å bruke  *Team | Add to Index* etterfulgt av *Team | Commit … | Commit and Push* og hentes ned ved å bruke *Team | Pull*.
+
+For å unngå konflikter ifm. endringer i koden bør du utføre *Team | Pull* får du begynner å gjøre endringer og det er god praksis ofte å gjøre pushe endringer opp til opbevaringsplasser slik de blir tilgjengelig for de andre gruppemedlemmer.
