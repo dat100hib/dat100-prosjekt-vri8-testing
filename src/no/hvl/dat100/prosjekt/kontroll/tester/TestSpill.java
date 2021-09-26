@@ -2,12 +2,17 @@ package no.hvl.dat100.prosjekt.kontroll.tester;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.Test;
 
+import no.hvl.dat100.prosjekt.kontroll.Bord;
 import no.hvl.dat100.prosjekt.kontroll.ISpiller;
 import no.hvl.dat100.prosjekt.kontroll.Spill;
 import no.hvl.dat100.prosjekt.kontroll.dommer.Regler;
+import no.hvl.dat100.prosjekt.kontroll.spill.Handling;
+import no.hvl.dat100.prosjekt.kontroll.spill.HandlingsType;
 import no.hvl.dat100.prosjekt.kontroll.spill.Spillere;
 import no.hvl.dat100.prosjekt.modell.KortSamling;
 import no.hvl.dat100.prosjekt.modell.Kort;
@@ -15,44 +20,40 @@ import no.hvl.dat100.prosjekt.modell.Kortfarge;
 
 public class TestSpill {
 
-	// TODO - legg til test av konstruktør
+	@Test
+	public void testConstructor() {
+		
+		Spill spill = new Spill();
+		
+		assertNotNull(spill.getBord());
+		assertNotNull(spill.getSyd());
+		assertNotNull(spill.getNord());
+		
+		assertEquals(Spillere.SYD, spill.getSyd().hvem());
+		assertEquals(Spillere.NORD, spill.getNord().hvem());
+	}
 	
 	@Test
-	public void Teststart() {
+	public void teststart() {
 		Spill spill = new Spill();
 
+		Bord bord = spill.getBord();
+		
 		spill.start();
 
 		ISpiller syd = spill.getSyd();
 		ISpiller nord = spill.getNord();
 
-		KortSamling bunkeTil = spill.getBord().getBunkeTil();
-		KortSamling bunkeFra = spill.getBord().getBunkeFra();
+		int antalltil = bord.antallBunkeTil();
+		int antallfra = bord.antallBunkeFra();
 
-		assertEquals(Spillere.SYD, syd.hvem());
-		assertEquals(Spillere.NORD, nord.hvem());
-
+		// check utdeling
 		assertEquals(Spill.ANTALL_KORT_START, syd.getAntallKort());
 		assertEquals(Spill.ANTALL_KORT_START, nord.getAntallKort());
 
-		assertEquals(1, bunkeTil.getAntalKort());
-		assertEquals(Regler.MAKS_KORT_FARGE * 4 - (Spill.ANTALL_KORT_START * 2) - 1, bunkeFra.getAntalKort());
+		assertEquals(1, antalltil);
+		assertEquals(Regler.MAKS_KORT_FARGE * 4 - (Spill.ANTALL_KORT_START * 2) - 1, antallfra);
 
-	}
-
-
-
-	@Test
-	public void TestHenteMetoder() {
-		Spill spill = new Spill();
-
-		spill.start();
-		
-		assertFalse(spill.getBord().bunketilTom());
-		assertFalse(spill.getBord().bunkefraTom());
-		assertEquals(Spill.ANTALL_KORT_START, spill.antallNord());
-		assertEquals(Regler.MAKS_KORT_FARGE * 4 - (Spill.ANTALL_KORT_START * 2) - 1, spill.getBord().antallBunkeFra());
-		assertEquals(1, spill.getBord().antallBunkeTil());
 	}
 	
 	@Test
@@ -109,5 +110,57 @@ public class TestSpill {
 		spill.forbiSpiller(spiller);
 		
 		// assertEquals(0, spiller.getAntallTrekk());
+	}
+	
+	@Test
+	public void testutforhandling () {
+		
+		Spill spill = new Spill();
+		Bord bord = spill.getBord();
+		
+		spill.start();
+		
+		ISpiller spiller = spill.getSyd();
+		
+		Kort[] allekort = spiller.getHand().getAllekort();
+		Kort kort = allekort[0];
+		
+		// teste legg ned handling
+		Handling handling = new Handling(HandlingsType.LEGGNED,kort);
+		
+		spill.utforHandling(spiller, handling);
+		
+		assertEquals(kort,spill.getBord().seOversteBunkeTil());
+		assertFalse(spiller.getHand().har(kort));
+		
+		// teste forbi handling
+		int antalltil = bord.antallBunkeTil();
+		int antallfra = bord.antallBunkeFra();
+		int antallkort = spiller.getAntallKort();
+		
+		handling = new Handling(HandlingsType.FORBI,null);
+		spill.utforHandling(spiller, handling);
+		
+		assertEquals(antalltil, bord.antallBunkeTil());
+		assertEquals(antallfra, bord.antallBunkeFra());
+		assertEquals(antallkort, spiller.getAntallKort());
+		
+		// test trekk handling
+		Kort kortfra = bord.getBunkeFra().seSiste();
+		handling = new Handling(HandlingsType.TREKK,null);
+		
+		antalltil = bord.antallBunkeTil();
+		antallfra = bord.antallBunkeFra();
+		antallkort = spiller.getAntallKort();
+		
+		Kort trukket = spill.utforHandling(spiller, handling);
+		
+		assertNotNull(trukket);
+		assertEquals(kortfra,trukket);
+		assertTrue(spiller.getHand().har(trukket));
+		
+		assertEquals(antalltil, bord.antallBunkeTil());
+		assertEquals(antallfra-1, bord.antallBunkeFra());
+		assertEquals(antallkort+1, spiller.getAntallKort());
 	}
 }
