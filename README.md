@@ -47,7 +47,7 @@ Dette kan gjøres som beskrevet her: https://github.com/dat100hib/dat100-prosjek
 
 ## Programmeringsoppgaver
 
-- [**Oppgave 1:** Implementasjon av KortSamling, Hand og Bunke](https://github.com/dat100hib/dat100-prosjekt-testing-2021/blob/master/docs/oppgave1.md)
+- [**Oppgave 1:** Implementasjon av KortSamling og hjelpemetoder Bunke](https://github.com/dat100hib/dat100-prosjekt-testing-2021/blob/master/docs/oppgave1.md)
 - [**Oppgave 2:** Implementasjon av Spiller og Spill-klassene](https://github.com/dat100hib/dat100-prosjekt-testing-2021/blob/master/docs/oppgave2.md)
 - [**Oppgave 3:** Implementation av First-fit strategi for Syd](https://github.com/dat100hib/dat100-prosjekt-testing-2021/blob/master/docs/oppgave3.md)
 - [**Oppgave 4:** Valgfrie ekstraoppgaver](https://github.com/dat100hib/dat100-prosjekt-testing-2021/blob/master/docs/oppgave4.md)
