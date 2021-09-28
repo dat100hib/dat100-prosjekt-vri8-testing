@@ -1,6 +1,6 @@
 ## DAT100 - Programmeringsprosjekt
 
-Prosjektet handler om å implementation av kortspillet vri-åtter i Java med fokus på implementasjon av de sentrale datastrukturer og spill-logikk som ligger bak en spill-applikasjon.
+Prosjektet handler om å implementation av kortspillet vri-åtter i Java med fokus på implementasjon av de sentrale datastrukturer og spill-logikk som ligger bak en spill-applikasjon. 
 
 Dere vil få utlevert startkode i form av et Eclipse-prosjekt som skal danne utgangspunkt for ulike Java programmer. I prosjektet skal dere jobbe i grupper på 2-4 personer med å implementere de delene som mangler for at programmene blir komplett.
 
