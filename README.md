@@ -1,6 +1,6 @@
 ## DAT100 - Programmeringsprosjekt
 
-Prosjektet handler om å implementation av kortspillet vri-åtter i Java med fokus på implementasjon av de sentrale datastrukturer og spill-logikk som ligger bak en spill-applikasjon. 
+Prosjektet handler om implementation av kortspillet vri-åtter i Java med fokus på implementasjon av de sentrale datastrukturer og spill-logikk som ligger bak en spill-applikasjon.
 
 Dere vil få utlevert startkode i form av et Eclipse-prosjekt som skal danne utgangspunkt for ulike Java programmer. I prosjektet skal dere jobbe i grupper på 2-4 personer med å implementere de delene som mangler for at programmene blir komplett.
 
@@ -16,7 +16,7 @@ Deler av prosjektet vil sannsynligvis oppleves som krevende for en del. Det gjel
 
 Der er **ikke** ordinære forelesninger i uke 41, men der vil være programmerings-lab på de vanlige tidspunktene. Her vil lab-assistenter være til stede for å hjelpe og svare på spørsmål relatert til programmeringsprosjektet.
 
-Det er også mulig å bruke discord-serveren for faget til å stille spørsmål. Det er **IKKE** lov å legge ut ferdige løsninger på Discord. Det anbefales også å se på forelesningsnotatene fra forelesningen der programmeringsprosjektet blev introdusert.
+Det er også mulig å bruke discord-serveren for faget til å stille spørsmål. Det er **IKKE** lov å legge ut ferdige løsninger på Discord. Det anbefales også å se på forelesningsnotatene fra forelesningen der programmeringsprosjektet ble introdusert.
 
 ## Uke 42 - Prosjekt gruppepresentasjoner
 
@@ -29,7 +29,7 @@ Ved presentasjon må hver gruppe gi en kort demonstrasjon av Java-programmene si
 
 ### Tips til presentasjonen
 
-Det er viktig at der er en logisk flytt gjennom presentasjonen så den er enkel å følge for de andre gruppene.  Det enkleste er å vise koden ved å bruke Eclipse.
+Det er viktig at der er en logisk flyt gjennom presentasjonen så den er enkel å følge for de andre gruppene.  Det enkleste er å vise koden ved å bruke Eclipse.
 
 **Husk** å bruke en skriftstørrelse som kan sees av tilhørerne. Skriftstørrelsen i Eclipse kan justeres ved å bruke *Ctrl +/-*. Lab-assistenter/undervisere vil være tilstede på presentasjon.
 
@@ -41,7 +41,7 @@ https://github.com/dat100hib/dat100-prosjekt-testing-2021/blob/master/docs/intro
 
 ## Startkode og enhetstester
 
-Første steg for å komme igang med programmeringen er å laste ned et Eclipse-prosjekt med startkode og et Eclipse-prosjekt med enhetstester importere disse.
+Første steg for å komme igang med programmeringen er å laste ned et Eclipse-prosjekt med startkode og et Eclipse-prosjekt med enhetstester og importere disse.
 
 Dette kan gjøres som beskrevet her: https://github.com/dat100hib/dat100-prosjekt-testing-2021/blob/master/docs/startkode.md
 

@@ -1,14 +1,14 @@
-## 8. Ekstraoppgaver
+## 4. Ekstraoppgaver
 
 For de som har tid og lyst finnes nedenfor noen ideer til å utvikle vri-åtter spillet videre. Noen av de er mer krevende så denne delen er frivillig.
 
-### 8.1 - Best av N runder
+### 4.1 - Best av N runder
 
 Utvid programmet så det blir mulig for *Nord* og *Syd* å spille best av *N* runder. Undersøk om *Nord* eller *Syd* sin strategi ser ut til å være best.
 
 For å implementere spill i *N* runder, se på metodene `startSpill` og `spillAuto` i `Kontroll`-klassen. Den siste blir utført når brukeren trykker på *Play*-knappen i brukergrensesnittet.
 
-### 8.2 - Bedre strategi for Syd
+### 4.2 - Bedre strategi for Syd
 
 Hvis oppgave 8.1 ovenfor indikerer at *Nord* sin strategi er best, forsøk da å implementere en strategi for *Syd* som er bedre enn *Nord* sin.
 
@@ -21,6 +21,6 @@ Noen tips og ideer til inspirasjon
 
 Strategien kan implementeres ved å endre i klassen `SydSpiller.java`. Alternativt kan man lage en ny klasse `Strategi.java` etter malen fra `SydSpiller` og så endre hvilken type spiller-objekt som blir oprettet for syd i `start()`-metoden i `Spill.java`-klassen.
 
-### 8.3 - Konkurranse med andre grupper
+### 4.3 - Konkurranse med andre grupper
 
 Finn en annen gruppe i klassen og undersøk/konkurrer om hvem som er kommet opp med den beste strategien. Dette kan gjøres ved å endre i hvilke objekter som opprettes for syd og nord i  `start()`-metoden i `Spill.java`-klassen.

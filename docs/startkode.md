@@ -85,7 +85,7 @@ En test-klasse med enhetstest utføres ved å velge test-klassen etterfulgt av *
 
 Det er god/anbefalt praksis å gjenta testene når det gjøres endringer/forbedringer i implementasjonen av en metode. Det anbefales også å teste etterhvert som de enkelte metoder implementeres. Enhetstestene er ikke komplette, men tester basale ting for metodene i de klasser som dere skal implementere.
 
-Etterhvert som de grunnleggende metoder implementeres kan applikasjonen også testes via det grafiske brukergrensesnitt.
+Etterhvert som de grunnleggende metoder implementeres kan applikasjonen også testes via det grafiske brukergrensesnittet.
 
 Enhetstesting og test-drevet utvikling er et tema senere i studiet og det er et generellt godt ingeniørprinsipp å teste komponentene sine før de settes sammen til et større system.
 
