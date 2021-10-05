@@ -8,7 +8,7 @@ Det andre Eclipse-prosjektet inneholder en rekke enhetstester som skal bruke til
 
 Fremgangsmåten for å importere Java-koden inn i Eclipse er beskrevet nedenfor og også vist i video som er lagt ut på Canvas:
 
-**TODO: produsere video som viser import og startkode og enhetstester + start av programmet**
+https://hvl.instructure.com/courses/17211/pages/programmeringsprosjekt-importere-startkode
 
 Men viktig å lese instruksjonene nedenfor.
 
