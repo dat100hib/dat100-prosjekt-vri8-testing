@@ -17,7 +17,7 @@ En av spillerne starter. Dette vil være den som er til venstre for giver, men i
 Følgene handlingstyper er lovlige
 
 1.	**Legg ned**. Spille et kort til til-bunken. Det er lov å legge ned et kort som er av samme farge eller har samme verdi som kortet som ligger øverst på til-bunken. Det er også lov å spille en vilkårlig åtter. Det spilte kort, ligger nå øverst på til-bunken. Deretter blir det motstanderen sin tur.
-2.	** Trekk** Trekke et kort fra fra-bunken. Hvis fra-bunken er tom, må man ta det øverste kort i til-bunken, stokke resten og legge de ned som den nye fra-bunken. I denne forenklede versjon av spillet kan en spiller høyst trekke et kort når det er han/hun sin tur.
+2.	**Trekk** Trekke et kort fra fra-bunken. Hvis fra-bunken er tom, må man ta det øverste kort i til-bunken, stokke resten og legge de ned som den nye fra-bunken. I denne forenklede versjon av spillet kan en spiller høyst trekke et kort når det er han/hun sin tur.
 3.	**Forbi** Si forbi (pass). Dette er kun lov etter man har trukket ett kort.
 
 
