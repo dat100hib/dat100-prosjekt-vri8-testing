@@ -128,29 +128,27 @@ class TestBord {
 	
 	@Test
 	public void TestsnuBunken() {
-		Spill spill = new Spill();
 
-		spill.start();
+		Bord bord = new Bord();
 
-		KortSamling bunkeTil = spill.getBord().getBunkeTil();
-		KortSamling bunkeFra = spill.getBord().getBunkeFra();
-
-		int bunkefraantall = bunkeFra.getAntalKort();
+		KortSamling bunkeTil = bord.getBunkeTil();
+		KortSamling bunkeFra = bord.getBunkeFra();
 
 		while (!bunkeFra.erTom()) {
 			bunkeTil.leggTil(bunkeFra.taSiste());
 		}
 
+		int bunketilantall = bunkeTil.getAntalKort();
 		Kort overst = bunkeTil.seSiste();
 
-		spill.getBord().snuTilBunken();
+		bord.snuTilBunken();
 
-		bunkeTil = spill.getBord().getBunkeTil();
-		bunkeFra = spill.getBord().getBunkeFra();
+		bunkeTil = bord.getBunkeTil();
+		bunkeFra = bord.getBunkeFra();
 
 		assertEquals(1, bunkeTil.getAntalKort());
 		assertEquals(overst, bunkeTil.seSiste());
-		assertEquals(bunkefraantall, bunkeFra.getAntalKort());
+		assertEquals(bunketilantall-1, bunkeFra.getAntalKort());
 
 	}
 	
