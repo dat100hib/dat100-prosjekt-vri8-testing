@@ -64,6 +64,9 @@ public class TestKortSamling {
 		
 		assertFalse(samling.har(null));
 		assertFalse(samling.har(kort));
+		
+		kort = new Kort(Kortfarge.Hjerter,1);
+		assertTrue(samling.har(kort));
 	}
 
 	@Test
