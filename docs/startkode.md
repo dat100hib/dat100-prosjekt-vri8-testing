@@ -38,6 +38,14 @@ Eclipse-prosjektet er organisert i et antall pakker med en pakke til hver av opp
 
 De steder i koden hvor der skal implementeres Java-kode er merket med en kommenter og teksten `TODO`. Disse plassene i koden kan lett identifiseres ved at de gir en blå markering i høyresiden av editor-vinduet i Eclipse.
 
+De metoder som skal implementeres inneholder en linje på formen:
+
+```java
+throw new UnsupportedOperationException(TODO.method(" ... "));
+```
+
+som signaler et *unntak* om at en metode/konstruktør ikke er implementert. Denne linjen skal dere fjerne når metoden implementeres.
+
 For å gjøre det enklere ifm. presentasjon av oppgaven å finne de plassene hvor dere har lagt til kode, anbefales det å la kommentarene med `TODO – START` og `TODO SLUTT` bli stående i koden.  
 
 ### Java-kildekoden for implementasjonen av spillet
