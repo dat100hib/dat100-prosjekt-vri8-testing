@@ -6,33 +6,35 @@ Det ene Eclipse-prosjekt inneholder en rekke Java-klasser som utgjør rammen run
 
 Det andre Eclipse-prosjektet inneholder en rekke enhetstester som skal bruke til automatisk å teste den koden dere skriver.
 
-Fremgangsmåten for å importere Java-koden inn i Eclipse er beskrevet nedenfor og også vist i video som er lagt ut på Canvas:
+Fremgangsmåten for å importere Java-koden inn i Eclipse er den samme for dere tidligere har brukt for å importere startkode i obligatoriske innlevering og for å få tilgang til kodeeksempler fra forelesninger. 
 
-https://hvl.instructure.com/courses/17211/pages/programmeringsprosjekt-importere-startkode
+Men **viktig** å lese instruksjonene nedenfor.
 
-Men viktig å lese instruksjonene nedenfor.
+## Steg 1: Importere Eclipse-prosjekt med startkode (Use as template + Clone + Import)
 
-## Steg 1: Importere Eclipse-prosjekt med startkode (Fork + Clone + Import)
-
-Det finnes allerede kode i Eclipse-prosjektet som implementerer brukergrensesnittet basert på rammeverket Swing (beskrevet i Java-boken, Kapittel 14).
+Det finnes allerede kode i Eclipse-prosjektet som implementerer brukergrensesnittet basert på rammeverket Swing.
 
 ### Fork oppbevaringsplassen med startkode
 
 Gå inn på github på oppbevaringsplassen som inneholder start-koden:
 
-https://github.com/dat100hib/dat100-prosjekt-startkode-2021
+https://github.com/dat100hib/dat100-prosjekt-vri8-startcode
 
-Begynn med å opprette en kopi av denne oppbevaringsplassen ved å bruke **fork** (se øverste høyre hjørne på github-websiden). Du vil da få en kopi av oppbevaringsplassen med startkoden på din egen github konto.
+Begynn med å opprette en kopi av denne oppbevaringsplassen ved å bruke **Use as template** (se øverste høyre hjørne på github-websiden). Du vil da få en kopi av oppbevaringsplassen med startkoden på din egen github konto.
 
 ### Klone og importere startkode i Eclipse
 
-Du må nå **klone** (laste ned) oppbevaringsplassen med kode som du opprettet ovenfor. Det er **viktig** at du **ikke** kloner https://github.com/dat100hib/dat100-prosjekt-startkode-2021, men kloner den oppbevaringsplassen som du opprettet på din egen konto da du utførte fork ovenfor.
+Du må nå **klone** (laste ned) oppbevaringsplassen med kode som du opprettet ovenfor. 
 
-1.	Velg *Code* på github-siden
+Det er **viktig** at du **ikke** kloner https://github.com/dat100hib/dat100-prosjekt-vri8-startcode, men kloner den oppbevaringsplassen som du opprettet på din egen konto da du utførte *use as template* ovenfor.
 
-2.	Velg lenken og last ned en kopi (clone) oppbevaringsplassen på samme måten som du har gjort i Eclipse i tidligere oppgaver for å importere.
+1.	Velg *<>Code* på github-siden for oppbevaringsplassen og kopier lenken.
 
-Du skal nå ha et prosjekt i Eclipse med navnet `dat100prosjekt-startcode`
+2.	Gå inn i Github Desktop og velg *File -> Clone Repository ...*, lim inn lenken under *URL* og velg hvor du vil lagre din lokale kopi av oppbevaingsplassen. Velg deretter *Clone*
+
+3. Importer prosjektet inn i Eclipse ved å bruke *File -> Import ->Existing projects into Workspace*
+
+Du skal nå ha et prosjekt i Eclipse med navnet `dat100prosjekt-vri8-startcode`
 
 Eclipse-prosjektet er organisert i et antall pakker med en pakke til hver av oppgavene i prosjektet. Pakkene inneholder de klasser og metoder som gruppen skal implementere i oppgavene som presenteres nedenfor.
 
@@ -43,14 +45,13 @@ De metoder som skal implementeres inneholder en linje på formen:
 ```java
 throw new UnsupportedOperationException(TODO.method(" ... "));
 ```
-
 som signaler et *unntak* om at en metode/konstruktør ikke er implementert. Denne linjen skal dere fjerne når metoden implementeres.
 
 For å gjøre det enklere ifm. presentasjon av oppgaven å finne de plassene hvor dere har lagt til kode, anbefales det å la kommentarene med `TODO – START` og `TODO SLUTT` bli stående i koden.  
 
 ### Java-kildekoden for implementasjonen av spillet
 
-Overordnet er implementasjon oppdelt etter en arkitektur som kalles *modell-utsyn-kontroll* som er en ofte brukt måte å strukturere en større applikasjon på. Man kan lese mere om dette generelle programvarearkitekturprinsippet i Javaboken (Kapittel 15.8).
+Overordnet er implementasjon oppdelt etter en arkitektur som kalles *modell-utsyn-kontroll* som er en ofte brukt måte å strukturere en større applikasjon på. Man kan lese mere om dette generelle programvarearkitekturprinsippet i Java-boken (Kapittel 15.8).
 
 Konkret i dette prosjektet betyr det at koden er organisert i tre pakker:
 
@@ -70,15 +71,17 @@ For å gjøre det enklere å finne ut hva de ulike metoder i klassene skal gjør
 
 ## Steg 2: Eclipse-prosjekt med enhetstester (Clone + Import)
 
-Formålet med enhetstestene er å gjøre det enklere å teste metoder etterhvert som de implementeres uten å skulle starte selve spill-applikasjonen. Et Eclipse-prosjekt med ferdige enhetstester finnes på følgende github oppbevaringsplass:
+Formålet med enhetstestene er å gjøre det enklere å teste metoder etterhvert som de implementeres uten å skulle starte selve spill-applikasjonen. 
 
-https://github.com/dat100hib/dat100-prosjekt-testing-2021
+Et Eclipse-prosjekt med ferdige enhetstester finnes på følgende github oppbevaringsplass:
+
+https://github.com/dat100hib/dat100-prosjekt-vri8-testing
 
 ## Klone og importere enhetstester i Eclipse
 
-Du **kloner** oppbevaringsplassen og importerer inn i Eclipse på samme måten som tidligere, men nå med oppbevaringsplassen gitt i lenken ovenfor. Du trenger **ikke** å gjøre fork på denne oppbevaringsplassen først siden du ikke trenger din egen kopi av oppbevaringsplassen på github.
+Du **kloner** oppbevaringsplassen og importerer det inn i Eclipse på samme måten som tidligere, men nå med oppbevaringsplassen gitt i lenken ovenfor. Du trenger **ikke** å gjøre *Use as template* på denne oppbevaringsplassen først siden du ikke trenger din egen kopi av oppbevaringsplassen på github.
 
-Du skal nå ha et prosjekt i Eclipse med navnet `dat100prosjekt-testing` som inneholder en rekke enhetstester (unit-tests) implementert ved bruk av rammeverket JUnit. Det er ikke et krav i prosjektet å legge til flere enhetstester.
+Du skal nå ha et prosjekt i Eclipse med navnet `dat100prosjekt-vri8-testing` som inneholder en rekke enhetstester (unit-tests) implementert ved bruk av rammeverket JUnit. Det er ikke et krav i prosjektet å legge til flere enhetstester.
 
 Enhets-test for implementasjonen er organisert i to pakker:
 
@@ -99,8 +102,10 @@ Enhetstesting og test-drevet utvikling er et tema senere i studiet og det er et 
 
 ## Dele oppbevaringsplass mellom gruppemedlemmer
 
-Det enbefales at gruppen bruker en felles github-oppbevaringsplass for koden som utvikles. Det er derfor tilstrekkelig at en i gruppen utfører steg 1 ovenfor og gir de andre medlemmene i gruppen tilgang til oppbevaringsplassen (repository). Dette kan gjøres ved å logge inn på https://www.github.com, gå til oppbevaringsplassen og via *Settings* og *Manage access* for oppbevaringsplassen og legge til de andre medlemmer i gruppen som *Collaborators*.
+Det anbefales at gruppen bruker en felles github-oppbevaringsplass for koden som utvikles. Det er derfor tilstrekkelig at en i gruppen utfører steg 1 ovenfor og gir de andre medlemmene i gruppen tilgang til oppbevaringsplassen (repository). Dette kan gjøres ved å logge inn på https://www.github.com, gå til oppbevaringsplassen og via *Settings* og *Collaborators and Teams* for oppbevaringsplassen legge til de andre medlemmer i gruppen som *Collaborators*.
 
-De andre gruppemedlemmene må da klone oppbevaringsplassen ned på egen PC ved å velge *File → Import → Git → Projects from Git → Clone URI* i Eclipse og lime inn URL’en til den felles oppbevaringsplassen. Endringer i filer i prosjektet lastes opp til den felles oppbevaringsplassen ved å bruke  *Team | Add to Index* etterfulgt av *Team | Commit … | Commit and Push* og hentes ned ved å bruke *Team | Pull*.
+De andre gruppemedlemmene må da klone oppbevaringsplassen ned på egen PC via Github Desktop og importere prosjektet inn i Eclipse.
 
-For å unngå konflikter ifm. endringer i koden bør du utføre *Team | Pull* får du begynner å gjøre endringer og det er god praksis ofte å gjøre pushe endringer opp til opbevaringsplasser slik de blir tilgjengelig for de andre gruppemedlemmer.
+Endringer i filer i prosjektet lastes opp til den felles oppbevaringsplassen ved å bruke *Commit* og *Push to origin* i Github Desktop applikasjonen.
+
+For å redusere konflikter ifm. endringer i koden bør du utføre *Fetch from origin* og *pull* før du begynner å gjøre endringer og det er god praksis ofte å  gjøre commit og push opp til opbevaringsplassen slik endringer de blir tilgjengelig for de andre gruppemedlemmer.

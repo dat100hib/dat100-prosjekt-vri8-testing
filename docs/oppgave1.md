@@ -1,6 +1,6 @@
 ## Oppgave 1: Implementasjon av KortSamling og hjelpemetoder
 
-Den første oppgaven er å ferdiggjøre implementasjon av klassen `KortSamling` i `modell`-pakken `no.hvl.dat100.prosjekt.modell` samt noen hjelpemetoder i `KortUtils`klassen.
+Den første oppgaven er å ferdiggjøre implementasjon av klassen `KortSamling` i `modell`-pakken `no.hvl.dat100.prosjekt.modell` samt noen hjelpemetoder i `KortUtils`-klassen.
 
 ### Oppgave 1.1 - Studer klassene Kort og Kortfarge
 
@@ -16,9 +16,9 @@ Denne klassen skal brukes til å representere til-bunken, fra-bunken samt de kor
 
 Her skal vi gjøre bruk av referansetabeller som beskrevet i kapittel 6.4 i Java-boken.
 
-Start med metodene i klassen `KortSamling` som skal gjøre det mulig å lagre en samling av kort i en tabell etter samme prinsipp som brukt i oppgave 3 på programmeringslab 7:
+Start med metodene i klassen `KortSamling` som skal gjøre det mulig å lagre en samling av kort i en tabell etter samme prinsipp som brukt i oppgave B1 og B2 på programmeringslab 7:
 
-https://github.com/dat100hib/dat100public/blob/master/programmering/jplab7/JP7.md#oppgave-3---klasser
+https://github.com/dat100hib/dat100public/blob/master/programmering/jplab7/JP7.md
 
 Kommentarene i koden for `KortSamling` beskriver hva de ulike metodene skal gjøre.
 

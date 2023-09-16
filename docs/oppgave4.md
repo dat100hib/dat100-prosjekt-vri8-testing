@@ -10,7 +10,7 @@ For å implementere spill i *N* runder, se på metodene `startSpill` og `spillAu
 
 ### 4.2 - Bedre strategi for Syd
 
-Hvis oppgave 8.1 ovenfor indikerer at *Nord* sin strategi er best, forsøk da å implementere en strategi for *Syd* som er bedre enn *Nord* sin.
+Hvis oppgaven ovenfor indikerer at *Nord* sin strategi er best, forsøk da å implementere en strategi for *Syd* som er bedre enn *Nord* sin.
 
 Noen tips og ideer til inspirasjon
 
