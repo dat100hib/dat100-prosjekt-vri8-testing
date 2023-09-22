@@ -14,7 +14,7 @@ Men **viktig** å lese instruksjonene nedenfor.
 
 Det finnes allerede kode i Eclipse-prosjektet som implementerer brukergrensesnittet basert på rammeverket Swing.
 
-### Fork oppbevaringsplassen med startkode
+### Bruke oppbevaringsplassen med startkode som mal
 
 Gå inn på github på oppbevaringsplassen som inneholder start-koden:
 
